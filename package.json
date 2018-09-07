@@ -8,13 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node" : "8.11.4"
+    "node": "8.11.4"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
     "modules": "^0.4.0",
-    "path-__dirname": "^2.1.0"
+    "path-__dirname": "^2.1.0",
+    "socket.io": "^2.1.1"
   }
 }
