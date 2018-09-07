@@ -24,13 +24,18 @@ io.on('connection', (socket) => {
 //     text: 'hello ankesh how r u'
 // });
 
-socket.emit('newMessage',{
-    from:'mayank',
-    text:'hello mayank'
-});
+// socket.emit('newMessage',{
+//     from:'mayank',
+//     text:'hello mayank'
+// });
 
   socket.on('createMessage',(message)=>{
       console.log('createMessage',message);
+      io.emit('newMessage',{
+          from: message.from,
+          text:message.text,
+          createdAt: new Date().getTime()
+      })
   });
 
 //   socket.on('createEmail', (newEmail) => {
